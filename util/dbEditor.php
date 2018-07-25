@@ -18,8 +18,8 @@ class dbEditor {
     public function insert($id, $text, $type = 'plain', $password = '') {
         $sql = null;
         if ($password == '' || $password == null) {
-            $sql = "INSERT INTO `paste`(`id`, `text`, `type`) VALUES ({$id}, '{$text}', '{$type}')";
-        } else $sql = "INSERT INTO `paste` VALUES ({$id}, '{$text}', '{$type}', '{$password}')";
+            $sql = "INSERT INTO `paste`(`id`, `text`, `type`) VALUES ({$id}, \"{$text}\", '{$type}')";
+        } else $sql = "INSERT INTO `paste` VALUES ({$id}, \"{$text}\", '{$type}', '{$password}')";
         if (mysqli_query($this->connection, $sql)) return True;
         return $this->error();
     }
