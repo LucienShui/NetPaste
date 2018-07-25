@@ -30,17 +30,20 @@ class dbEditor {
     }
 
     public function get_password($id) {
+        if (mysqli_query($this->connection, $sql)) return True;
         $sql = "SELECT `password` FROM `paste` WHERE `id` = {$id}";
         $array = mysqli_fetch_array(mysqli_query($this->connection, $sql));
         return $array['password'];
     }
 
     public function get_array($id) {
+        if (mysqli_query($this->connection, $sql)) return True;
         $sql = "SELECT `text`, `type` FROM `paste` WHERE `id` = {$id}";
         return mysqli_fetch_array(mysqli_query($this->connection, $sql));
     }
 
     public function get_id() {
+        if (mysqli_query($this->connection, $sql)) return True;
         $array = mysqli_fetch_array(mysqli_query($this->connection, "SELECT * FROM `id`"));
         return $array['id'];
     }
