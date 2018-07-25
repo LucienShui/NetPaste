@@ -39,8 +39,10 @@ if (preg_match('/^\/p\/[0-9]*$/', $request_url) == 0) {
             <?php
         } else {
             ?>
-            <form class="form-horizontal" action="util/validation.php" method="post">
-                <div class="col-sm-5">
+            <form class="form-horizontal" action="/util/validation.php" method="post">
+                <div class="col-sm-3">
+                </div>
+                <div class="col-sm-6">
                     <div class="form-group">
                         <label for="pswdusr">此文本已加密，请输入密码：</label>
                         <input class="form-control" id="pswdusr" name="password_user">
@@ -49,6 +51,8 @@ if (preg_match('/^\/p\/[0-9]*$/', $request_url) == 0) {
                         <input style="display: none" name="id" value="<?php echo $id; ?>" title="id">
                     </div>
                     <button type="submit" class="btn btn-primary">提交</button>
+                </div>
+                <div class="col-sm-3">
                 </div>
             </form>
             <?php
