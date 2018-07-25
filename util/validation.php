@@ -14,5 +14,5 @@ if (isset($_POST['id'])) {
         $url = $_POST['id'];
     } else echo "<script> alert('密码错误') </script>";
 }
-header("Refresh:0;url=/" . $url);
+header("Refresh:0;url=/p/" . $url);
 ?>

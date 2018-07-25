@@ -4,14 +4,14 @@
  * Date: 2018/7/26
  * Time: 0:03
  */
-$request_url = $_SERVER["REQUEST_URI"]; // 取当前路由的后缀
-if (preg_match('/^/p/[0-9]*$/', $request_url) == 0) {
+$request_url = str_replace('/', '', $_SERVER["REQUEST_URI"]); // 取当前路由的后缀
+if (preg_match('/^\/p\/[0-9]*$/', $request_url) == 0) {
     echo "<script> alert('请确认索引是否存在') </script>";
     header("Refresh:0;url=/" . $url);
 } else {
     require 'util/tableEditor.php';
     $it = new tableEditor();
-    $id = str_replace('/p/', '', $request_url);
+    $id = $request_url;
 //    echo $it->exists($id);
 //    if (False) {
     if (!$it->exists($id)) {
@@ -32,9 +32,9 @@ if (preg_match('/^/p/[0-9]*$/', $request_url) == 0) {
         if ($flag) {
             $content = $it->content($id);
             ?>
-            <link rel="stylesheet" type="text/css" href="css/prism.css">
-            <script src="js/prism.js"></script>
-            <script src="js/prism.select-all.js"></script>
+            <link rel="stylesheet" type="text/css" href="/css/prism.css">
+            <script src="/js/prism.js"></script>
+            <script src="/js/prism.select-all.js"></script>
             <pre><code class="language-<?php echo $content['type']; ?> line-numbers-rows"><?php echo $content['text']; ?></code></pre>
             <?php
         } else {
