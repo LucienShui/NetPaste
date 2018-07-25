@@ -5,7 +5,6 @@
  * Time: 0:03
  */
 $request_url = str_replace('/', '', $_SERVER["REQUEST_URI"]); // 取当前路由的后缀
-$request_url = $_GET['url'];
 if (preg_match('/^[0-9]*$/', $request_url) == 0) {
     echo "<script> alert('请确认索引是否存在') </script>";
     header("Refresh:0;url=/" . $url);
