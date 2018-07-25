@@ -14,5 +14,5 @@ if (isset($_POST['text'])) {
     $id = $it->insert($text, $type, $password);
     if (~$id) $url = $id;
 }
-header("Refresh:0;url=/" . $url);
+header("Refresh:0;url=/p/" . $url);
 ?>
