@@ -11,8 +11,8 @@ if (isset($_POST['id'])) {
     if ($password_right == $password_user) {
         session_start();
         $_SESSION["{$_POST['id']}"] = $_POST['password_right'];
-        $url = $_POST['id'];
+        $url = 'p/' . $_POST['id'];
     } else echo "<script> alert('密码错误') </script>";
 }
-header("Refresh:0;url=/p/" . $url);
+header("Refresh:0;url=/" . $url);
 ?>
