@@ -35,7 +35,7 @@ if (preg_match('/^[0-9]*$/', $request_url) == 0) {
             <link rel="stylesheet" type="text/css" href="css/prism.css">
             <script src="js/prism.js"></script>
             <script src="js/prism.select-all.js"></script>
-            <pre><code class="language-<?php echo $content['type']; ?> line-numbers-rows"><?php echo htmlspecialchars($content['text']); ?></code></pre>
+            <pre><code class="language-<?php echo $content['type']; ?> line-numbers-rows"><?php echo $content['text']; ?></code></pre>
             <?php
         } else {
             ?>
