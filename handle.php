@@ -42,12 +42,11 @@ if (preg_match('/^\/p\/[0-9]*$/', $request_url) == 0) {
             <form class="form-horizontal" action="util/validation.php" method="post">
                 <div class="col-sm-5">
                     <div class="form-group">
-                        <div class="input-group">
-                            <label for="pswdusr">此文本已加密，请输入密码：</label>
-                            <input class="form-control" id="pswdusr" name="password_user">
-                            <input style="display: none" name="password_right" value="<?php echo $password; ?>" title="pswdrt">
-                            <input style="display: none" name="id" value="<?php echo $id; ?>" title="id">
-                        </div>
+                        <label for="pswdusr">此文本已加密，请输入密码：</label>
+                        <input class="form-control" id="pswdusr" name="password_user">
+                        <input style="display: none" name="password_right" value="<?php echo $password; ?>"
+                               title="pswdrt">
+                        <input style="display: none" name="id" value="<?php echo $id; ?>" title="id">
                     </div>
                     <button type="submit" class="btn btn-primary">提交</button>
                 </div>
