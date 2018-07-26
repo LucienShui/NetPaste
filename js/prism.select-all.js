@@ -1,6 +1,6 @@
 Prism.plugins.toolbar.registerButton('select-code', function(env) {
     const button = document.createElement('button');
-    button.innerHTML = 'Select All';
+    button.innerHTML = '全选';
 
     button.addEventListener('click', function () {
         let range;
