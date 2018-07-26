@@ -70,8 +70,8 @@
       <file leaf-file-name="validation.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/util/validation.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="100">
-              <caret line="5" column="2" selection-start-line="5" selection-start-column="2" selection-end-line="5" selection-end-column="2" />
+            <state relative-caret-position="180">
+              <caret line="9" column="38" selection-start-line="9" selection-start-column="38" selection-end-line="9" selection-end-column="38" />
             </state>
           </provider>
         </entry>
@@ -79,8 +79,8 @@
       <file leaf-file-name="handle.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/handle.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="320">
-              <caret line="18" column="29" lean-forward="true" selection-start-line="18" selection-start-column="29" selection-end-line="18" selection-end-column="29" />
+            <state relative-caret-position="180">
+              <caret line="9" selection-start-line="9" selection-end-line="9" />
             </state>
           </provider>
         </entry>
@@ -130,9 +130,9 @@
         <option value="$PROJECT_DIR$/util/handle.php" />
         <option value="$PROJECT_DIR$/util/dbEditor.php" />
         <option value="$PROJECT_DIR$/util/submit.php" />
-        <option value="$PROJECT_DIR$/util/validation.php" />
         <option value="$PROJECT_DIR$/test0.php" />
         <option value="$PROJECT_DIR$/test1.php" />
+        <option value="$PROJECT_DIR$/util/validation.php" />
         <option value="$PROJECT_DIR$/handle.php" />
       </list>
     </option>
@@ -146,10 +146,19 @@
   <component name="NodePackageJsonFileManager">
     <packageJsonPaths />
   </component>
+  <component name="PhpServers">
+    <servers>
+      <server host="127.0.0.1" id="aad2f9c4-0e44-4fc4-ae0d-6fcbe2b0275a" name="PHP" port="8080" use_path_mappings="true">
+        <path_mappings>
+          <mapping local-root="$PROJECT_DIR$" remote-root="/" />
+        </path_mappings>
+      </server>
+    </servers>
+  </component>
   <component name="PhpWorkspaceProjectConfiguration" interpreter_name="PHP" />
   <component name="ProjectFrameBounds">
-    <option name="x" value="418" />
-    <option name="y" value="131" />
+    <option name="x" value="12" />
+    <option name="y" value="80" />
     <option name="width" value="1399" />
     <option name="height" value="812" />
   </component>
@@ -166,6 +175,11 @@
             <path>
               <item name="NetPaste" type="b2602c69:ProjectViewProjectNode" />
               <item name="NetPaste" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="NetPaste" type="b2602c69:ProjectViewProjectNode" />
+              <item name="NetPaste" type="462c0819:PsiDirectoryNode" />
+              <item name="util" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -220,7 +234,7 @@
       <workItem from="1532428468289" duration="25886000" />
       <workItem from="1532534138805" duration="11200000" />
       <workItem from="1532594346937" duration="1736000" />
-      <workItem from="1532598482632" duration="1052000" />
+      <workItem from="1532598482632" duration="2354000" />
     </task>
     <task id="LOCAL-00001" summary="upload project">
       <created>1532538475047</created>
@@ -245,10 +259,11 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="39874000" />
+    <option name="totallyTimeSpent" value="41176000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="418" y="131" width="1399" height="812" extended-state="0" />
+    <frame x="12" y="80" width="1399" height="812" extended-state="0" />
+    <editor active="true" />
     <layout>
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="PHP-CGI Server" order="7" />
@@ -256,8 +271,8 @@
       <window_info anchor="bottom" id="Database Changes" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="7" />
       <window_info anchor="bottom" id="Run" order="2" />
-      <window_info anchor="bottom" id="Terminal" order="7" visible="true" weight="0.22827688" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.1926811" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="7" visible="true" weight="0.22827688" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.1926811" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="right" id="Database" order="3" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -531,15 +546,15 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/util/validation.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="100">
-          <caret line="5" column="2" selection-start-line="5" selection-start-column="2" selection-end-line="5" selection-end-column="2" />
+        <state relative-caret-position="180">
+          <caret line="9" column="38" selection-start-line="9" selection-start-column="38" selection-end-line="9" selection-end-column="38" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/handle.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="320">
-          <caret line="18" column="29" lean-forward="true" selection-start-line="18" selection-start-column="29" selection-end-line="18" selection-end-column="29" />
+        <state relative-caret-position="180">
+          <caret line="9" selection-start-line="9" selection-end-line="9" />
         </state>
       </provider>
     </entry>

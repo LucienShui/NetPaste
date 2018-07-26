@@ -5,6 +5,9 @@
  * Time: 0:03
  */
 session_start();
+if (isset($_POST['id'])) {
+    $_SESSION[$_POST['id']] = $_POST['password_user'];
+}
 $request_url = $_SERVER["REQUEST_URI"]; // 取当前路由的后缀
 if (preg_match('/^\/p\/[0-9]*$/', $request_url) == 0) {
     echo "<script> alert('请确认索引是否存在') </script>";
@@ -37,15 +40,13 @@ if (preg_match('/^\/p\/[0-9]*$/', $request_url) == 0) {
             <?php
         } else {
             ?>
-            <form class="form-horizontal" action="/util/validation.php" method="post">
+            <form class="form-horizontal" action="/p/<?php echo $id; ?>" method="post">
                 <div class="col-sm-3">
                 </div>
                 <div class="col-sm-6">
                     <div class="form-group">
                         <label for="pswdusr">此文本已加密，请输入密码：</label>
                         <input class="form-control" id="pswdusr" name="password_user">
-                        <input style="display: none" name="password_right" value="<?php echo $password; ?>"
-                               title="pswdrt">
                         <input style="display: none" name="id" value="<?php echo $id; ?>" title="id">
                     </div>
                     <button type="submit" class="btn btn-primary">提交</button>
