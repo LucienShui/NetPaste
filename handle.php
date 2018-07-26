@@ -10,7 +10,7 @@ if (isset($_POST['id'])) {
     $password_user = $_POST['password_user'];
 }
 $request_url = $_SERVER["REQUEST_URI"]; // 取当前路由的后缀
-if (preg_match('/^\/p\/[0-9]*$/', $request_url) == 0) {
+if (preg_match('/^[0-9]*$/', $request_url) == 0) {
     echo "<script> alert('请确认索引是否存在') </script>";
     header("Refresh:0;url=/" . $url);
 } else {
