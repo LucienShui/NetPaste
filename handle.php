@@ -10,13 +10,13 @@ if (isset($_POST['id'])) {
     $password_user = $_POST['password_user'];
 }
 $request_url = $_SERVER["REQUEST_URI"]; // 取当前路由的后缀
-if (preg_match('/^[0-9]*$/', $request_url) == 0) {
+$id = str_replace('/', '', $request_url);
+if (preg_match('/^[0-9]*$/', $id) == 0) {
     echo "<script> alert('请确认索引是否存在') </script>";
     header("Refresh:0;url=/" . $url);
 } else {
     require 'util/tableEditor.php';
     $it = new tableEditor();
-    $id = str_replace('/p/', '', $request_url);
     if (!$it->exists($id)) {
         echo "<script> alert('请确认索引是否存在') </script>";
         header("Refresh:0;url=/" . $url);
