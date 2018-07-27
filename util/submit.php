@@ -7,9 +7,9 @@
 require 'tableEditor.php';
 $url = '';
 if (isset($_POST['text'])) {
-    $text = $_POST['text'];
+    $text = str_replace("\"", "\\\"", $_POST['text']);
     $type = $_POST['type'];
-    $password = str_replace("\"", "\\\"", $_POST['password']);
+    $password = $_POST['password'];
     $it = new tableEditor();
     $id = $it->insert($text, $type, $password);
     if (~$id) $url = $id;
