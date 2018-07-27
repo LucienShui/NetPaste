@@ -50,7 +50,7 @@ if (preg_match('/^[0-9]*$/', $id) == 0) {
                 <div class="col-sm-6">
                     <div class="form-group">
                         <label for="pswdusr">此文本已加密，请输入密码：</label>
-                        <input class="form-control" id="pswdusr" name="password_user" placeholder="<?php echo $placeholder; ?>">
+                        <input type="password" class="form-control" id="pswdusr" name="password_user" placeholder="<?php echo $placeholder; ?>">
                         <input style="display: none" name="id" value="<?php echo $id; ?>" title="id">
                     </div>
                     <button type="submit" class="btn btn-primary">提交</button>
