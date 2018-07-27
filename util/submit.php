@@ -9,7 +9,7 @@ $url = '';
 if (isset($_POST['text'])) {
     $text = $_POST['text'];
     $type = $_POST['type'];
-    $password = $_POST['password'];
+    $password = str_replace("\"", "\\\"", $_POST['password']);
     $it = new tableEditor();
     $id = $it->insert($text, $type, $password);
     if (~$id) $url = $id;
