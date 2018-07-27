@@ -44,7 +44,7 @@ if (preg_match('/^[0-9]*$/', $id) == 0) {
             <?php
         } else {
             ?>
-            <form class="form-horizontal" action="/p/<?php echo $id; ?>" method="post">
+            <form class="form-horizontal" action="/<?php echo $id; ?>" method="post">
                 <div class="col-sm-3">
                 </div>
                 <div class="col-sm-6">
