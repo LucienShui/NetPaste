@@ -7,7 +7,7 @@
 require 'tableEditor.php';
 $url = '';
 if (isset($_POST['text'])) {
-    $text = str_replace("\"", "\\\"", $_POST['text']);
+    $text = htmlspecialchars(str_replace("\\", "\\\\", $_POST['text']));
     $type = $_POST['type'];
     $password = $_POST['password'];
     $it = new tableEditor();
