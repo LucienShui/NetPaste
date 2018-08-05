@@ -32,8 +32,7 @@ if (preg_match('/^[0-9]*$/', $id) == 0) {
             }
         }
         require 'util/util.php';
-        $frame = getFrame();
-        echo $frame[0];
+        head();
         if ($flag) {
             $content = $it->content($id);
             ?>
@@ -60,7 +59,7 @@ if (preg_match('/^[0-9]*$/', $id) == 0) {
             </form>
             <?php
         }
-        echo $frame[1];
+        foot();
     }
 }
 ?>

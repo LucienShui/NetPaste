@@ -1,8 +1,8 @@
 <?php
-require_once 'util/util.php';
-$frame = getFrame();
-echo $frame[0];
+require 'util/util.php';
+head();
 ?>
+<script src="js/tools.js"></script>
 <form class="form-horizontal" action="util/submit.php" method="post">
     <div class="col-sm-5">
         <div class="form-group">
@@ -41,5 +41,5 @@ echo $frame[0];
     </div>
 </form>
 <?php
-echo $frame[1];
+foot();
 ?>

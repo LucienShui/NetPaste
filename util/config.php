@@ -4,5 +4,6 @@ return array(
     'username' => 'root',
     'password' => 'root',
     'dbname' => 'paste',
+    'website' => 'http://netpaste.cf',
 );
 ?>
