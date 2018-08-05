@@ -1,3 +1,8 @@
+function enterJudge() {
+    if (window.event.keyCode === 13) {
+        redirect();
+    }
+}
 function stringCheck(str) {
     let len = str.length;
     for (let i = 0; i < len; i++) {
