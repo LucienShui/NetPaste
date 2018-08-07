@@ -2,8 +2,6 @@
 require_once('dbEditor.php');
 $db = new dbEditor();
 $sqlSet = array(
-    'DROP TABLE IF EXISTS `paste`',
-    'DROP TABLE IF EXISTS `id`',
     'CREATE TABLE IF NOT EXISTS `id` (`id` int PRIMARY KEY)',
     'INSERT INTO `id` VALUES (100)',
     'CREATE TABLE IF NOT EXISTS `paste` (
