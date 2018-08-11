@@ -2,7 +2,7 @@
 
 Ubuntu Paste的本土化版，添加了加密功能，粘贴板的代码可以一键全选
 
-## 服务端部署
+## 部署
 
 ```
 web_root
@@ -23,6 +23,10 @@ web_root
      ├─ prism.js
      └─ prism.select-all.js
 ```
+
+修改`web_root/util/config.php`中的数据库相关的信息，并将`website`项更改为服务器的域名。
+
+然后第一次启动网页时，执行`web_root/util/init.php`来初始化数据库。
 
 ### Rewrite（必要）
 
