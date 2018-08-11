@@ -16,28 +16,35 @@ class dbEditor {
     }
 
     public function insert($id, $text, $type = 'plain', $password = '') {
-        $sql = null;
-        if ($password == '' || $password == null) {
-            $sql = "INSERT INTO `paste`(`id`, `text`, `type`) VALUES ({$id}, \"{$text}\", '{$type}')";
-        } else $sql = "INSERT INTO `paste` VALUES ({$id}, \"{$text}\", '{$type}', '{$password}')";
-        if (mysqli_query($this->connection, $sql)) return True;
-        return $this->error();
-    }
-
-    public function query($sql) {
-        if (mysqli_query($this->connection, $sql)) return True;
+        $sql = $this->connection->prepare("INSERT INTO `paste` VALUES (?, ?, ?, ?)");
+        $sql->bind_param('dsss', $id, $text, $type, $password);
+        if ($sql->execute()) return True;
         return $this->error();
     }
 
     public function get_password($id) {
-        $sql = "SELECT `password` FROM `paste` WHERE `id` = {$id}";
-        $array = mysqli_fetch_array(mysqli_query($this->connection, $sql));
-        return $array['password'];
+        $sql = $this->connection->prepare("SELECT `password` FROM `paste` WHERE `id` = ?");
+        $sql->bind_param('d', $id);
+        $sql->execute();
+        $sql->store_result();
+        $sql->bind_result($password);
+        $sql->fetch();
+        $sql->close();
+        return $password;
     }
 
     public function get_array($id) {
-        $sql = "SELECT `text`, `type` FROM `paste` WHERE `id` = {$id}";
-        return mysqli_fetch_array(mysqli_query($this->connection, $sql));
+        $sql = $this->connection->prepare("SELECT `text`, `type` FROM `paste` WHERE `id` = ?");
+        $sql->bind_param('d', $id);
+        $sql->execute();
+        $sql->store_result();
+        $sql->bind_result($text, $type);
+        $sql->fetch();
+        $sql->close();
+        return array(
+            'text' => $text,
+            'type' => $type,
+        );
     }
 
     public function get_id() {
@@ -50,8 +57,11 @@ class dbEditor {
     }
 
     public function exists($id) {
-        $array = mysqli_fetch_array(mysqli_query($this->connection, "SELECT `id` FROM `paste` WHERE `id` = {$id}"));
-        return $array != null;
+        $sql = $this->connection->prepare("SELECT `id` FROM `paste` WHERE `id` = ?");
+        $sql->bind_param('d', $id);
+        $sql->execute();
+        $sql->store_result();
+        return $sql->num_rows > 0;
     }
 }
 ?>
