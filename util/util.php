@@ -18,7 +18,7 @@ function head() {
         <meta charset="utf-8"/>
         <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
         <meta name="viewport" content="width=device-width, initial-scale=1"/>
-        <title>NetPaste</title>
+        <title>PasteMe</title>
         <link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/4.1.1/css/bootstrap.min.css"/>
         <script src="/js/tools.js"></script>
     </head>
@@ -32,7 +32,7 @@ function head() {
                             data-target="#bs-example-navbar-collapse-1">
                         <span class="navbar-toggler-icon"></span>
                     </button>
-                    <a class="navbar-brand" href="<?php $config = require 'config.php'; echo $config['website'];?>">NetPaste</a>
+                    <a class="navbar-brand" href="<?php $config = require 'config.php'; echo $config['website'];?>">PasteMe</a>
                     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                         <ul class="navbar-nav">
                             <li class="nav-item dropdown">
@@ -42,7 +42,7 @@ function head() {
                                 </a>
                                 <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink1">
                                     <div class="dropdown-header">网络剪贴板</div>
-                                    <a class="dropdown-item" href="http://www.lucien.ink/go/clip">NetClip</a>
+                                    <a class="dropdown-item" href="http://www.lucien.ink/go/clip">ClipMe</a>
                                     <div class="dropdown-divider"></div>
                                     <div class="dropdown-header">在线二维码生成</div>
                                     <a class="dropdown-item" href="http://qrcode.lucien.ink">QRCode Generator</a>
