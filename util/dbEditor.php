@@ -57,8 +57,6 @@ class dbEditor {
     }
 
     public function exists($id) {
-        mysqli_query($this->connection, "USE `{$this->config['dbname']}`");
-        $this->error();
         $sql = $this->connection->prepare("SELECT `id` FROM `paste` WHERE `id` = ?");
         $sql->bind_param('d', $id);
         $sql->execute();
