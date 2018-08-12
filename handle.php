@@ -31,7 +31,7 @@ if (preg_match('/^[0-9]*$/', $id) == 0) {
                 $placeholder = "密码错误";
             }
         }
-        require 'util/util.php';
+        require 'util/frame.php';
         head();
         if ($flag) {
             $content = $it->content($id);
