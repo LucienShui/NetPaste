@@ -3,7 +3,7 @@ class dbEditor {
     private $connection = null;
     private $config;
     public function __construct() {
-        $this->config = require_once ('config.php');
+        $this->config = require ('config.php');
         $config = $this->config;
         $this->connection = mysqli_connect($config['dbhost'],$config['username'],$config['password']);
         if (!$this->connection) die('Error: ' . mysqli_error($this->connection));
@@ -57,6 +57,8 @@ class dbEditor {
     }
 
     public function exists($id) {
+        mysqli_query($this->connection, "USE `{$this->config['dbname']}`");
+        $this->error();
         $sql = $this->connection->prepare("SELECT `id` FROM `paste` WHERE `id` = ?");
         $sql->bind_param('d', $id);
         $sql->execute();
