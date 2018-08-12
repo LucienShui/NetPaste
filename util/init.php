@@ -3,6 +3,8 @@ $config = require_once('config.php');
 $connection = mysqli_connect($config['dbhost'], $config['username'], $config['password']);
 if (!$connection) die('Error' . mysqli_error($connection));
 $sqlSet = array(
+    "CREATE DATABASE IF NOT EXISTS {$config['dbname']}",
+    "USE {$config['dbname']}",
     "CREATE TABLE IF NOT EXISTS `id` (`id` int PRIMARY KEY)",
     "INSERT INTO `id` VALUES (100)",
     "CREATE TABLE IF NOT EXISTS `paste` (
