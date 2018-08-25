@@ -1,3 +1,7 @@
+# 此项目已合并至[PasteMe](https://github.com/LucienShui/PasteMe)
+
+# 以下是曾经的内容
+
 # NetPaste
 
 Ubuntu Paste的本土化版，添加了加密功能，粘贴板的代码可以一键全选
